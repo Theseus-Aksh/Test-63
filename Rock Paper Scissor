@@ -1,0 +1,31 @@
+import random
+
+while True:
+    User = input('Enter Your Choice(Rock,Paper,Scissor): ')
+    option = ['Rock', "Paper", 'Scissor']
+    com = random.choice(option)
+    print('You choose ' + User + ' and Computer choose ' + com)
+
+    if User == com:
+        print('The game is tied')
+
+    elif User == 'Paper':
+        if com == 'Rock':
+            print('Paper capture Rock:User won ')
+        else:
+            print('Scissor tear down Paper :Computer won ')
+
+    elif User == 'Scissor':
+        if com == 'Rock':
+            print('Rock crushed Scissor :Computer won ')
+        else:
+            print('Scissor turned Paper into pieces :User won ')
+
+    elif User == 'Rock':
+        if com == 'Scissor':
+            print('Rock broke Scissor Neck :User won ')
+        else:
+            print('Paper captured Rock :Computer won ')
+    con = input('WOULD YOU LIKE A REMATCH(y/n): ')
+    if con == "n":
+        break
